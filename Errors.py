@@ -1,0 +1,3 @@
+class CityLimitError(Exception):
+    pass
+
