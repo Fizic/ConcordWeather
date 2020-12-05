@@ -1,1 +1,2 @@
 # ConcordWeather
+Версия Python 3.6.8
