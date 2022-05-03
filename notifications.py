@@ -1,18 +1,18 @@
 from win10toast import ToastNotifier
-from get_data import *
+from services import get_temperature
 import datetime as dt
 from time import sleep
 
 
 def send_notification(city_name, date_time):
-    date = date_time.split()[0]
-    time = date_time.split()[1]
-    notif = ToastNotifier()
+    date, time = date_time.split()[:2]
+    notification = ToastNotifier()
     timer(date_time)
-    notif.show_toast("Concord Weather",
-                     "Сегодня " + date + ' ' + time + ' погода в ' + city_name + ' ' + str(
-                         int(take_data(city_name))) + '°C',
-                     duration=20, icon_path="img/icon.ico", )
+    temperature = get_temperature(city_name)
+    message = f"Сегодня {date} {time} погода в {city_name} {temperature}°C"
+    notification.show_toast("Concord Weather",
+                            message,
+                            duration=20, icon_path="img/icon.ico", )
 
 
 def timer(date_notification):
@@ -28,5 +28,5 @@ def timer(date_notification):
     date_notification = dt.datetime(year, month, day, hours, minutes)
     date_now = dt.datetime.now()
     time_sleep = (date_notification - date_now).days * 24 * 60 * 60 + (
-                date_notification - date_now).seconds
+            date_notification - date_now).seconds
     sleep(time_sleep)

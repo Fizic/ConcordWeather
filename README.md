@@ -1,4 +1,8 @@
 # ConcordWeather
-#Версия Python 3.6.8
-#Для запуска приложения необходимо установить библеотеки из файла requirements.txt
-#После чего запустить файл main.py
+
+---
+# Quick Start
+
+1. Install Python 3.6+
+2. Run ```pip install -r requirements.txt```
+3. Run ```python main.py```

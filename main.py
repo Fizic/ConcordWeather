@@ -1,4 +1,6 @@
-from Windows import *
+from windows import *
+from PyQt5.QtWidgets import QApplication
+import sys
 
 app = QApplication(sys.argv)
 ex = HomeW()
