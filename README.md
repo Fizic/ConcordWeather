@@ -1,4 +1,12 @@
 # ConcordWeather
-#Версия Python 3.6.8
-#Для запуска приложения необходимо установить библеотеки из файла requirements.txt
-#После чего запустить файл main.py
+
+Учебный проект "Яндекс Лицея". Приложение просмотра погоды написанное на языке python.
+
+---
+# Quick Start
+
+1. Install Python 3.6+
+2. Run ```git clone https://github.com/Fizic/ConcordWeather.git```
+3. Run ```cd ConcordWeather```
+4. Run ```pip install -r requirements.txt```
+5. Run ```python main.py```
